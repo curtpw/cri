@@ -8,13 +8,41 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 There should be whitespace between paragraphs.
 
-#[]()Master Class Project: Neuro Plasma Hacker
+# []()Master Class Project: Neuro Plasma Hacker
 
-## [](#master)Wearable Device Programming, Neural Networks on Mobile Apps, Controlling IoT (Internet of Things)
+## [](#master)Wearable Devices, Neural Network Mobile Apps, Controlling IoT 
 
-Our goal is to hack an off the shelf wearable device, send accelerometer and optical sensor from the hacked device to a mobile app which we will create, build and train a neural network in the mobile app to detect a specific set of wearable device data, and use the sensor data detection results to control a modified plasma globe connected to a Raspberry Pi over the internet. I also have a number of Arduino microcontrollers and a wide array of sensors (Heart Rate, gesture, proximity, accelerometer, gyrescope, GSR/EDA, pressure, stretch) for you to explore if you want something simple.
+Your goal is to **hack** an off the shelf **wearable device, send accelerometer data** from the hacked device **to a mobile app** which we will create, build and train a **neural network** in the mobile app to detect a specific set of wearable device data, and use the sensor data detection results **to control a modified plasma globe** connected to a Raspberry Pi over the internet. I also have a number of Arduino microcontrollers and a wide array of sensors (Heart Rate, gesture, proximity, accelerometer, gyrescope, GSR/EDA, pressure, stretch) for you to explore if you want something simple.
 
-### 
+### []()Wearable Device
+
+You will be hacking a fitbit clone containing a Nordic nRF52832 SoC (System On a Chip) with a 64Mhz ARM microprocesor. This Device contains a Kionics KX022 Accelerometer and a Bluetooth 4 BLE tranciever. You can write code for the device using the Arduino IDE with Sandeep's Arduino Core for Nordic chips. I use a Segger JLink to program these devices but and SWD programmer will work. Hacking hardware can be tricky because unlike an Arduino or ARM development board the device has been built from the ground up to serve a specific purpose.
+
+1. Read a little about hacking Nordic wearables
+2. Install Arduino IDE
+3. Install Sandeep's Arduino Core for the nRF52832
+4. Install 'Hello World' sample code and experiment with variouse ways of coding the wearable
+5. Send accelerometer data over Bluetooth using a GATT notification
+
+
+### []()Mobile App
+
+You will create a mobile app using the Evothings protoyping tool for Apache Cordova. Cordova is a "hybrid" JavaScript development platform for building Android and iOS apps. This means that instead of writing Java for Android and Objective C for iOS you write a single body of code in JavaScript which Cordova converts into Java and Objective C. Evothings will allow you to run your Cordova code in the Evothings prototpyping app. This means you can run simple JavaScript on you laptop as a mobile app on your phone with native access to hardware!! You will need to connect to one of our wearable devices using Bluetooth and then pull data from the device using a GATT Notification Characteristic. You can use the Evothings console tool to monitor your app code the same way you would use the Chrome Dev Tools console during web development. Once you have your data its time to push it into a neural network. Synaptic a very easy to use framework for implementing MLP (Multi Layer Perceptron) neural nets in JavaScript. It is fairly simple compared to common data science tools but this very simplicity makes it perfect for real time data using minimal compuational resources (like a phone). Substantial training can be accomplished in seconds. 
+
+1. Install Evothings on your laptop
+2. Install the Evothings prototyping app on your mobile device
+3. Read abouthe Synaptic MLP (Multi Layer Perceptron) neural network framework
+4. Download the starter project and put it in your Evothings project folder
+5. Look at the starter project files. This will include the Synaptic JS and some methods for connecting to devices over Bluetooth.
+6. Get sensor data then build and train a neural network using streaming sensor data (you will want to collect and array of time series data)
+7. Test your neural net on live data and see how your results differ depending on how close the current device position approximates the position the device was in during traiing.
+8. Once you have results, its time to send them to our hacked plasma globe over the internet. We will be using a tool called Node-RED to connect our mobile app the the Raspberry Pi Zero Wireless over the internet.
+9. Before you can install Node-RED you will need to install Node.js on your laptop
+8. Install Node-RED, run the Node-RED application and open LOCAL HOST in a browser to view the Node-RED user interface
+
+### []()Plasma Globe Raspberry Pi
+
+I have soldered wires to the power switch of the Plasma Globe (yes, caps) so that the switch can be bypassed. These wires have been attached to a relay which is essentially a computer controlled switch. This relay will be attached to the GPIO (General Purpose Input Output pins). You will configure the Pi so that it can be accessed over the internet and made to turn the Plasma Globe on an off. If we are trying do display a non-binary value we might make the Plasma Globe turn on an off at variouse speeds - low speed for a low value and high speed or even always on for a high value. 
 
 # []()CRI Project Proposals
 
