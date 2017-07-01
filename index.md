@@ -4,13 +4,13 @@ layout: default
 
 ![](https://curtpw.github.io/cri/images/cmicurt.jpg)
 
-## []()**Master Class Project**
+## []()**Master Class Project:**
 
 # []()**Neuro Plasma Hacker**
 
-## [](#master)__Wearable Devices, Neural Networks on Mobile Apps, Controlling IoT~__
+## [](#master)*Wearable Devices, Neural Networks on Mobile Apps, Controlling IoT*
 
-Your goal is to **hack an off the shelf wearable device, send accelerometer data** from the hacked device **to a mobile app** which we will create, build **and train a neural network** in the mobile app to detect a specific set of wearable device data, and use the sensor data detection results **to control a modified plasma globe** connected to a Raspberry Pi over Bluetooth. I have divided the project into three separable parts. If all participants want to do mobile apps (the easiest from a hardware perspective) I can provide necessary sensor data for you. I also have a number of Arduino microcontrollers and a wide array of sensors (Heart Rate, gesture, proximity, accelerometer, gyroscope, GSR/EDA, pressure, stretch) for you to explore and play with if you want something simple.
+> Your goal is to **hack an off the shelf wearable device, send accelerometer data** from the hacked device **to a mobile app** which we will create, build **and train a neural network** in the mobile app to detect a specific set of wearable device data, and use the sensor data detection results **to control a modified plasma globe** connected to a Raspberry Pi over Bluetooth. I have divided the project into three separable parts. If all participants want to do mobile apps (the easiest from a hardware perspective) I can provide necessary sensor data for you. I also have a number of Arduino microcontrollers and a wide array of sensors (Heart Rate, gesture, proximity, accelerometer, gyroscope, GSR/EDA, pressure, stretch) for you to explore and play with if you want something simple.
 
 [Part 1: Streaming Sensor Data From Wearable Device](#wearable-device)
 [Part 2: MLP Neural Network of Mobile App Trained on Streaming Sensor Data](#mobile-app)
@@ -45,7 +45,8 @@ You will be hacking a FitBit clone (the ID107 Plus) containing a Nordic nRF52832
 6. Send accelerometer data over Bluetooth using a GATT notification
 
 
-## [](#mobile-app)**Mobile App with MLP Neural Network**
+## [](#mobile-app)**Mobile App with MLP Neural Network** 
+![](https://curtpw.github.io/cri/images/neurophone.jpg)
 
 You will create a mobile app using the Evothings prototyping tool for Apache Cordova. Cordova is a "hybrid" JavaScript development platform for building Android and iOS apps. This means that instead of writing Java for Android and Objective C for iOS you write a single body of code in JavaScript which Cordova converts into Java and Objective C. Evothings will allow you to run your Cordova code in the Evothings prototyping app. This means you can run simple JavaScript on you laptop as a mobile app on your phone with native access to hardware!! You will need to connect to one of our wearable devices using Bluetooth and then pull data from the device using a GATT Notification Characteristic. You can use the Evothings console tool to monitor your app code the same way you would use the Chrome Dev Tools console during web development. Once you have your data its time to push it into a neural network. Synaptic a very easy to use framework for implementing MLP (Multi Layer Perceptron) neural nets in JavaScript. It is fairly simple compared to common data science tools but this very simplicity makes it perfect for real time data using minimal computational resources (like a phone). Substantial training can be accomplished in seconds. 
 _NOTE: There should be iOS equivalents of all the Android apps I've linked_
