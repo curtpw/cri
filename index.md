@@ -17,11 +17,11 @@ Your goal is to **hack a**n off the shelf **wearable device, send accelerometer 
 [Part 3: Relay on Raspberry Pi Controlled By Mobile App](#raspberry-pi)
 [Alternate: Sensors on Arduino](#sensors)
 
-All examples and documentation can be downloaded here: 
+All examples and documentation can be downloaded here: [https://github.com/curtpw/cri-masterclass](https://github.com/curtpw/cri-masterclass)
 
-~ Curt White
+~ Curt
 
-NOTE: I have prepared all materials for CRI using Windows 10 because many people without a technical background use Windows and I aften find it difficult to avoid because of how Nordic releases developer tools. I duel boot linux on all my machines and can switch to Ubuntu if participants strongly prefer. 
+NOTE: I have prepared all materials for CRI using Windows 10 because many people without a technical background use Windows and I find it difficult to avoid because of how Nordic releases developer tools. I duel boot linux on all my machines and can switch to Ubuntu if participants strongly prefer. 
 
 ## [](#wearable-device)**Wearable Device Streaming Sensor Data**
 
@@ -114,11 +114,8 @@ Sensors:
 5.  APDS-9960: gesture detection, RGB color and proximity 
 	* [Sparkfun product page](https://www.sparkfun.com/products/12787)
 
-6.  Analog GSR(Galvanic Skin Response)/EDA(Electrodermal Activity) Sensor
-
-
-
-
+6.  Analog GSR(Galvanic Skin Response)/EDA(Electrodermal Activity) Sensor 
+	* [Seeed product page](http://wiki.seeed.cc/Grove-GSR_Sensor/)
 
 # []()**CRI Project Proposals**
 
@@ -139,115 +136,10 @@ Eye movement and gaze direction can tell us an incredible amount of information 
 
 ## [](#about-me)**About Curt**
 
-I usualy find that far more can be learned about a person from their family and childhood than their resume. I am named after my great grandfather Isaac Perry (his last name is my middle name). He owned a clock and watch repair shop in Elizabeth City, a town on the edge of the Great Dismal Swamp in North Carolina. During the Depresion of the 1930s his shop was shutterd and he could find no work. To provide for my family he fixed used shotgun and rifle casings which to all others were damaged, reloaded them being repair and traided the rounds to hunters in exchange for food. My father grew up in his worshop and I grew up in my father's workshop. My mother is a psychiatrist and graduated medical school at 21, four years younger than most people in her class. She decided to persue psychitry because mental health issues plague the majority of her family (the majority are also phasycians). Her mother, my grandmother, eventually killed herself. I have worked in the mental health space the majority of my career and during a great deal of my free time in various volunteer capacities. Mental health is far more important to me than technology ever will be. For more typical info you can look me up on LinkedIn.  
+I usualy find that more can be learned about a person from family and childhood than their resume. I was named after my great grandfather Isaac Perry (his last name is my middle name). He owned a clock and watch repair shop in Elizabeth City, a town on the edge of the Great Dismal Swamp in North Carolina. During the Great Depresion of the 1930s his shop was shutterd and he could find no work. To provide for my family he fixed and reloaded used, badly damaged shotgun and rifle casings and traided them to hunters in exchange for food. My father grew up in his worshop and I grew up in my father's workshop. My mother is a psychiatrist who graduated medical school at 21, four years younger than most people in her class. She decided to persue psychitry because mental health issues plague the majority of her family (the majority are also phasycians). Her mother, my grandmother, eventually killed herself. I have worked in the mental health space the majority of my career and spent a great deal of my free time in various volunteer capacities as well. You can also [look me up on LinkedIn.](https://www.linkedin.com/in/curtwhitepro/)
 
 ## []()Just for fun, some 'wearable device' holloween / burning man costumes from years past:
-![](https://curtpw.github.io/cri/images/plasmagloberockstar.jpg)
 
-## [](#header-2)Header 2
+[![](http://img.youtube.com/vi/E8d0ozE11r0/0.jpg)](http://www.youtube.com/watch?v=E8d0ozE11r0)
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### [](#header-3)Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### [](#header-4)Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### [](#header-5)Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### [](#header-6)Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+![](https://curtpw.github.io/cri/images/plasmagloberockstar.jpg) 
