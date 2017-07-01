@@ -10,22 +10,22 @@ layout: default
 
 ## [](#master)__Wearable Devices, Neural Networks on Mobile Apps, Controlling IoT~__
 
-Your goal is to **hack a**n off the shelf **wearable device, send accelerometer data** from the hacked device **to a mobile app** which we will create, build **and train a neural network** in the mobile app to detect a specific set of wearable device data, and use the sensor data detection results **to control a modified plasma globe** connected to a Raspberry Pi over Bluetooth. I have devided the project into three seperable parts. If all participants want to do mobile apps (the easient from a hardware perspective) I can provide necessary sensor data for you. I also have a number of Arduino microcontrollers and a wide array of sensors (Heart Rate, gesture, proximity, accelerometer, gyrescope, GSR/EDA, pressure, stretch) for you to explore and play with if you want something simple.
+Your goal is to **hack an off the shelf wearable device, send accelerometer data** from the hacked device **to a mobile app** which we will create, build **and train a neural network** in the mobile app to detect a specific set of wearable device data, and use the sensor data detection results **to control a modified plasma globe** connected to a Raspberry Pi over Bluetooth. I have divided the project into three separable parts. If all participants want to do mobile apps (the easiest from a hardware perspective) I can provide necessary sensor data for you. I also have a number of Arduino microcontrollers and a wide array of sensors (Heart Rate, gesture, proximity, accelerometer, gyroscope, GSR/EDA, pressure, stretch) for you to explore and play with if you want something simple.
 
 [Part 1: Streaming Sensor Data From Wearable Device](#wearable-device)
 [Part 2: MLP Neural Network of Mobile App Trained on Streaming Sensor Data](#mobile-app)
 [Part 3: Relay on Raspberry Pi Controlled By Mobile App](#raspberry-pi)
 [Alternate: Sensors on Arduino](#sensors)
 
-All examples and documentation can be downloaded here: [https://github.com/curtpw/cri-masterclass](https://github.com/curtpw/cri-masterclass)
+All examples and documentation can be found here: [https://github.com/curtpw/cri-masterclass](https://github.com/curtpw/cri-masterclass)
 
 ~ Curt
 
-NOTE: I have prepared all materials for CRI using Windows 10 because many people without a technical background use Windows and I find it difficult to avoid because of how Nordic releases developer tools. I duel boot linux on all my machines and can switch to Ubuntu if participants strongly prefer. 
+NOTE: I have prepared all materials for CRI using Windows 10 because many people without a technical background use Windows and I find it difficult to avoid because of how Nordic releases developer tools. I duel boot Linux on all my machines and can switch to Ubuntu if participants strongly prefer. 
 
 ## [](#wearable-device)**Wearable Device Streaming Sensor Data**
 
-You will be hacking a fitbit clone (the ID107 Plus) containing a Nordic nRF52832 SoC (System On a Chip) with a 64Mhz ARM microprocesor. This Device contains a Kionics KX022 Accelerometer and a Bluetooth 4 BLE tranciever. You can write code for the device using the Arduino IDE with Sandeep's Arduino Core for Nordic chips. I use a Segger JLink to program these devices but and SWD programmer will work. Hacking hardware can be tricky because unlike an Arduino or ARM development board the device has been built from the ground up to serve a specific purpose.
+You will be hacking a FitBit clone (the ID107 Plus) containing a Nordic nRF52832 SoC (System On a Chip) with a 64Mhz ARM microprocessor. This Device contains a Kionics KX022 Accelerometer and a Bluetooth 4 BLE transceiver. You can write code for the device using the Arduino IDE with Sandeep's Arduino Core for Nordic chips. I use a Segger JLink to program these devices but and SWD programmer will work. Hacking hardware can be tricky because unlike an Arduino or ARM development board the device has been built from the ground up to serve a specific purpose.
 
 1. Read a little about hacking Nordic wearables
 	* [Hackster.io tutorial on hacking an nRF51822 based ID107](https://www.hackster.io/smarty-the-team/smarty-the-watch-arduino-smartwatch-b9f7c4)
@@ -36,7 +36,7 @@ You will be hacking a fitbit clone (the ID107 Plus) containing a Nordic nRF52832
 	* [Getting started with Arduino](https://www.arduino.cc/en/Guide/HomePage)
 3. Install Sandeep's Arduino Core for the nRF52832
 	* [Sandeep's Arduino Core for Nordic Semiconductor nRF5 based boards](https://github.com/sandeepmistry/arduino-nRF5)
-4. Install 'Hello World' sample code (using provided J-Link programmer) and experiment with variouse ways of coding the wearable. You will need to install the provided "SoftDevice" (think of it as the connection between your application and the bootloader) before installing your application
+4. Install 'Hello World' sample code (using provided J-Link programmer) and experiment with various ways of coding the wearable. You will need to install the provided "SoftDevice" (think of it as the connection between your application and the bootloader) before installing your application
 	* [For Windows use nRFgo Studio](https://devzone.nordicsemi.com/blogs/840/nrfjprog-pynrfjprog-intro-mac-os-x-linux-now-suppo/)
 	* [For Linux and Mac use nrfjprog](https://www.nordicsemi.com/eng/Products/2.4GHz-RF/nRFgo-Studio)
 	* [nrfjprog in Python if you are so inclined](https://github.com/NordicSemiconductor/nRF5-universal-prog)
@@ -47,8 +47,8 @@ You will be hacking a fitbit clone (the ID107 Plus) containing a Nordic nRF52832
 
 ## [](#mobile-app)**Mobile App with MLP Neural Network**
 
-You will create a mobile app using the Evothings protoyping tool for Apache Cordova. Cordova is a "hybrid" JavaScript development platform for building Android and iOS apps. This means that instead of writing Java for Android and Objective C for iOS you write a single body of code in JavaScript which Cordova converts into Java and Objective C. Evothings will allow you to run your Cordova code in the Evothings prototpyping app. This means you can run simple JavaScript on you laptop as a mobile app on your phone with native access to hardware!! You will need to connect to one of our wearable devices using Bluetooth and then pull data from the device using a GATT Notification Characteristic. You can use the Evothings console tool to monitor your app code the same way you would use the Chrome Dev Tools console during web development. Once you have your data its time to push it into a neural network. Synaptic a very easy to use framework for implementing MLP (Multi Layer Perceptron) neural nets in JavaScript. It is fairly simple compared to common data science tools but this very simplicity makes it perfect for real time data using minimal compuational resources (like a phone). Substantial training can be accomplished in seconds. 
-_NOTE: There should be iOS equivelents of all the Android apps I've linked_
+You will create a mobile app using the Evothings prototyping tool for Apache Cordova. Cordova is a "hybrid" JavaScript development platform for building Android and iOS apps. This means that instead of writing Java for Android and Objective C for iOS you write a single body of code in JavaScript which Cordova converts into Java and Objective C. Evothings will allow you to run your Cordova code in the Evothings prototyping app. This means you can run simple JavaScript on you laptop as a mobile app on your phone with native access to hardware!! You will need to connect to one of our wearable devices using Bluetooth and then pull data from the device using a GATT Notification Characteristic. You can use the Evothings console tool to monitor your app code the same way you would use the Chrome Dev Tools console during web development. Once you have your data its time to push it into a neural network. Synaptic a very easy to use framework for implementing MLP (Multi Layer Perceptron) neural nets in JavaScript. It is fairly simple compared to common data science tools but this very simplicity makes it perfect for real time data using minimal computational resources (like a phone). Substantial training can be accomplished in seconds. 
+_NOTE: There should be iOS equivalents of all the Android apps I've linked_
 
 1. Install Evothings Workbench on your laptop
 	* [Evothings webpage](https://evothings.com/doc/index.html)
@@ -64,13 +64,14 @@ _NOTE: There should be iOS equivelents of all the Android apps I've linked_
 6. Decide how you want to use synaptic.js, write some code and test it by using the a BLE peripheral simulator app to send test data to your neural network app running in Evothings Viewer
 	* [BLE Peripheral Simulator on Google Playstore](https://play.google.com/store/apps/details?id=io.github.webbluetoothcg.bletestperipheral)
 7. Get sensor data then build and train a neural network using streaming sensor data (you will want to collect and array of time series data)
-8. Test your neural net on live data and see how your results differ depending on how close the current device position approximates the position the device was in during traiing.
+8. Test your neural net on live data and see how your results differ depending on how close the current device position approximates the position the device was in during training.
 
 Once you have meaningful output from your neural net its time to send them to our hacked plasma globe over the internet. 
 
 ## [](#raspberry-pi)**Plasma Globe with Raspberry Pi**
+![](https://curtpw.github.io/cri/images/plasma.jpg)
 
-I have soldered wires to the power switch of the Plasma Globe (yes, caps) so that the switch can be bypassed. These wires have been attached to a relay which is essentially a computer controlled switch. This relay will be attached to the GPIO (General Purpose Input Output pins). You will configure the Pi so that it can be accessed over bluetooth and made to turn the Plasma Globe on an off. If we are trying to display a non-binary value we might make the Plasma Globe turn on an off at variouse speeds - low speed for a low value and high speed or even always on for a high value. You may have trouble connecting to two devices at once (the hacke dwearable and the Pi Zero) in which case you will have to switch disconnect from the one device before connecting to the other.
+I have soldered wires to the power switch of the Plasma Globe (yes, caps) so that the switch can be bypassed. These wires have been attached to a relay which is essentially a computer controlled switch. This relay will be attached to the GPIO (General Purpose Input Output pins). You will configure the Pi so that it can be accessed over Bluetooth and made to turn the Plasma Globe on an off. If we are trying to display a non-binary value we might make the Plasma Globe turn on an off at various speeds - low speed for a low value and high speed or even always on for a high value. You may have trouble connecting to two devices at once (the hacker wearable and the Pi Zero) in which case you will have to switch disconnect from the one device before connecting to the other.
 
 1.	If you have not already completed the mobile app above install Evothings as instructed above. A large portion of this project section also includes mobile app development using Evothings.
 2.	Take a look at the Evothings Raspberry Pi example and download the example files
@@ -85,9 +86,9 @@ I have soldered wires to the power switch of the Plasma Globe (yes, caps) so tha
 3.	Learn about using Evothings with a Pi
 	* [Evothings Raspberry Pi example](https://evothings.com/doc/examples/rpi3-system-information.html)
 4.	Write a node.js app for the raspberry pi which can read Bluetooth BLE information ("characteristics") from your Evothings mobile app. Use the provided example or write your own starting from the Bleno Git repo examples. Use 'forever' to run your app so that it stays up ([sudo] npm install forever -g).
-5.	Once you have sucessfuly turned the Plasma Globe on and off with your Evothings Viewer mobile app, combine your Evothings app for Raspberry Pi with an Evothings App for applying streaming sensor data to neural nets
+5.	Once you have successfully turned the Plasma Globe on and off with your Evothings Viewer mobile app, combine your Evothings app for Raspberry Pi with an Evothings App for applying streaming sensor data to neural nets
 
-#### []()Combine all of the above and then see who light up the Plasma Globe by matching the gesture (wearable device position) trainned on the app neural net.
+#### []()Combine all of the above and then see who light up the Plasma Globe by matching the gesture (wearable device position) trained on the app neural net.
 
 ## [](#sensors)**Sensors and Arduino**
 
@@ -104,10 +105,10 @@ Sensors:
 	* [Sparkfun product page for MAX30105 (works with 30101)](https://learn.sparkfun.com/tutorials/max30105-particle-and-pulse-ox-sensor-hookup-guide)
 	* [Sparkfun Arduino library and example code](https://github.com/sparkfun/SparkFun_MAX3010x_Sensor_Library)
 
-3.	MPU-9250: combined accelerometer, gyrescope and magnetometer
+3.	MPU-9250: combined accelerometer, gyroscope and magnetometer
 	* [Sparkfun product page](https://www.sparkfun.com/products/13762)
 
-4.  MPU-6050: combined accelerometer and gyrescope
+4.  MPU-6050: combined accelerometer and gyroscope
 	* [Arduino product page](https://playground.arduino.cc/Main/MPU-6050)
 	* [Sparkfun product page](https://www.sparkfun.com/products/11028)
 
@@ -122,7 +123,7 @@ Sensors:
 ## [](#empathy)**Building Group Empathy with Sensors, Wearables and Biofeedback**
 ![](https://curtpw.github.io/cri/images/empathy.jpg)
 
-In a society that constantly emphasizes the individual it can be difficult to step in a stranger's shoes and see things from their perspective. In this project we will step into stranger’s bodies. Several wearable devices will be built capable of exchanging data with each other over a network. Each device will sense viscerally experienced bio-signals, for example heartbeat and respiration. Each device will also be capable of providing biofeedback which mimic these bio-signals, for example haptic feedback which ebbs and flows as a breath is taken or a pulsing solenoid (linear actuator) which presses into the chest in time with a heart beat. When a single user is not facing any other users, the biofeedback functions play back the user’s own vital signs, making them more aware of their body. When two users are facing each other, they exchange data and feel each other’s vital signs as if they had stepped into each other’s body. When a plurality of users face a single user, all users feel that focal individual's vital signs, subsuming the group into that individual. A number of wearable form factors could be suitable, the chest and head would be ideal mounting points. These devices could be used in group therapy, team building or any number of other applications.
+In a society that constantly emphasizes the individual it can be difficult to step in a stranger's shoes and see things from their perspective. In this project we will step into stranger’s bodies. Several wearable devices will be built capable of exchanging data with each other over a network. Each device will sense viscerally experienced bio-signals, for example heartbeat and respiration. Each device will also be capable of providing biofeedback which mimic these bio-signals, for example haptic feedback which ebbs and flows as a breath is taken or a pulsing solenoid (linear actuator) which presses into the chest in time with a heartbeat. When a single user is not facing any other users, the biofeedback functions play back the user’s own vital signs, making them more aware of their body. When two users are facing each other, they exchange data and feel each other’s vital signs as if they had stepped into each other’s body. When a plurality of users face a single user, all users feel that focal individual's vital signs, subsuming the group into that individual. A number of wearable form factors could be suitable, the chest and head would be ideal mounting points. These devices could be used in group therapy, team building or any number of other applications.
 
 ## [](#autism-audio)**Audacious Audio for Autism and ADHD: Environmental Audio Acquisition, Processing and Delivery On a Wearable Device**
 ![](https://curtpw.github.io/cri/images/hat.jpg)
@@ -136,10 +137,10 @@ Eye movement and gaze direction can tell us an incredible amount of information 
 
 ## [](#about-me)**About Curt**
 
-I usualy find that more can be learned about a person from family and childhood than their resume. I was named after my great grandfather Isaac Perry (his last name is my middle name). He owned a clock and watch repair shop in Elizabeth City, a town on the edge of the Great Dismal Swamp in North Carolina. During the Great Depresion of the 1930s his shop was shutterd and he could find no work. To provide for my family he fixed and reloaded used, badly damaged shotgun and rifle casings and traided them to hunters in exchange for food. My father grew up in his worshop and I grew up in my father's workshop. My mother is a psychiatrist who graduated medical school at 21, four years younger than most people in her class. She decided to persue psychitry because mental health issues plague the majority of her family (the majority are also phasycians). Her mother, my grandmother, eventually killed herself. I have worked in the mental health space the majority of my career and spent a great deal of my free time in various volunteer capacities as well. You can also [look me up on LinkedIn.](https://www.linkedin.com/in/curtwhitepro/)
+I usually find that more can be learned about a person from family and childhood than their resume. I was named after my great grandfather Isaac Perry (his last name is my middle name). He owned a clock and watch repair shop in Elizabeth City, a town on the edge of the Great Dismal Swamp in North Carolina. During the Great Depression of the 1930s his shop was shuttered and he could find no work. To provide for my family he fixed and reloaded used, badly damaged shotgun and rifle casings and traded them to hunters in exchange for food. My father grew up in his workshop and I grew up in my father's workshop. My mother is a psychiatrist who graduated medical school at 21, four years younger than most people in her class. She decided to pursue psychiatry because mental health issues plague the majority of her family (the majority are also physicians). Her mother, my grandmother, eventually killed herself. I have worked in the mental health space the majority of my career and spent a great deal of my free time in various volunteer capacities as well. You can also [look me up on LinkedIn.](https://www.linkedin.com/in/curtwhitepro/)
 
-## []()Just for fun, some 'wearable device' holloween / burning man costumes from years past:
+## []()Just for fun, some 'wearable device' Halloween / burning man costumes from years past:
 
 [![](http://img.youtube.com/vi/E8d0ozE11r0/0.jpg)](http://www.youtube.com/watch?v=E8d0ozE11r0)
 
-![](https://curtpw.github.io/cri/images/plasmagloberockstar.jpg) 
+![](https://curtpw.github.io/cri/images/plasmagloberockstar.jpg)
