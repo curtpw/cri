@@ -17,7 +17,7 @@ layout: default
 [Part 3: Relay on Raspberry Pi Controlled By Mobile App](#raspberry-pi)
 [Alternate: Sensors on Arduino](#sensors)
 
-All examples and documentation can be found here: [https://github.com/curtpw/cri-masterclass](https://github.com/curtpw/cri-masterclass)
+All examples and documentation can be found here: [https://github.com/curtpw/masterclass-cri](https://github.com/curtpw/masterclass-cri)
 
 ~ Curt
 
