@@ -24,12 +24,13 @@ All examples and documentation can be found here: [https://github.com/curtpw/mas
 
 ~ Curt
 
-**NOTE 1: Do you have little or no background in computer programming? Think you might end up spending hours trying to install obscure software, looking at code you don't understand, listenting to acronyms that might as well come from a random letter generator? DON'T WORRY!! If you are interested in the concepts, I can make this engaging for you - even if reading Foucault or Lacan seems easier that navigating the more technical material below. I promise. If you are looking for a place to start I recommend [Evothings](https://evothings.com/doc/index.html), especially [this example](https://evothings.com/doc/examples/cordova-accelerometer.html) which requires only a phone and involves no coding.** 
+**IMPORTANT: Do you have little or no background in computer programming? Think you might end up spending hours trying to install obscure software, looking at code you don't understand, listening to acronyms that might as well come from a random letter generator? DON'T WORRY!! If you are interested in the concepts, I can make this engaging for you - even if reading Foucault or Lacan seems easier that navigating the more technical material below. I promise. If you are looking for a place to start I recommend [Evothings](https://evothings.com/doc/index.html), especially [this example](https://evothings.com/doc/examples/cordova-accelerometer.html) which requires only a phone and involves no coding.** 
 
-NOTE 2: I have prepared all materials for CRI using Windows 10 because many people without a technical background use Windows and I find it difficult to avoid because of how Nordic releases developer tools. I duel boot Linux on all my machines and can switch to Ubuntu if participants strongly prefer. 
+I have prepared all materials for CRI using Windows 10 because many people without a technical background use Windows and I find it difficult to avoid because of how Nordic releases developer tools. I duel boot Linux on all my machines and can switch to Ubuntu if participants strongly prefer. 
 
 ## [](#mobile-app)**Preface: Neural Network with Your Phone's Accelerometer Data - no coding, minimal software installation** 
 ![](https://curtpw.github.io/cri/images/simplephone.jpg)
+Train and apply a MLP (Muli Layer Perceptron) neural network on your phone using your phone's accelerometer data. This MLP has two input nodes (X and Y axis), one output node (True/false) and two hidden layers - each with two nodes.
 
 1. Install Evothings Workbench on your laptop and Evothings Viewer on your phone
 	* [Evothings workbench](https://evothings.com/doc/index.html)
