@@ -12,6 +12,8 @@ layout: default
 
 > Your goal is to **hack an off the shelf wearable device, send accelerometer data** from the hacked device **to a mobile app** which we will create, build **and train a neural network** in the mobile app to detect a specific set of wearable device data, and use the sensor data detection results **to control a modified plasma globe** connected to a Raspberry Pi over Bluetooth. I have divided the project into three separable parts. If all participants want to do mobile apps (the easiest from a hardware perspective) I can provide necessary sensor data for you. I also have a number of Arduino microcontrollers and a wide array of sensors (Heart Rate, gesture, proximity, accelerometer, gyroscope, GSR/EDA, pressure, stretch) for you to explore and play with if you want something simple.
 
+[Preface: Neural Network with Your Phone's Accelerometer Data - no coding, minimal software installation](#preface)
+
 [Part 1: Streaming Sensor Data From Wearable Device](#wearable-device)
 
 [Part 2: MLP Neural Network of Mobile App Trained on Streaming Sensor Data](#mobile-app)
@@ -24,11 +26,11 @@ All examples and documentation can be found here: [https://github.com/curtpw/mas
 
 ~ Curt
 
-**IMPORTANT: Do you have little or no background in computer programming? Think you might end up spending hours trying to install obscure software, looking at code you don't understand, listening to acronyms that might as well come from a random letter generator? DON'T WORRY!! If you are interested in the concepts, I can make this engaging for you - even if reading Foucault or Lacan seems easier that navigating the more technical material below. I promise. If you are looking for a place to start I recommend [Evothings](https://evothings.com/doc/index.html), especially [this example](https://evothings.com/doc/examples/cordova-accelerometer.html) which requires only a phone and involves no coding.** 
+**IMPORTANT: Do you have little or no background in computer programming? Think you might end up spending hours trying to install obscure software, looking at code you don't understand, listening to acronyms that might as well come from a random letter generator? DON'T WORRY!! If you are interested in the concepts, I can make this engaging for you - even if reading Foucault or Lacan seems easier that navigating the more technical material below. I promise. If you are looking for a place to start I recommend [Evothings](https://evothings.com/doc/index.html), and the "Neural Network with Your Phone's Accelerometer Data" project below.** 
 
-I have prepared all materials for CRI using Windows 10 because many people without a technical background use Windows and I find it difficult to avoid because of how Nordic releases developer tools. I duel boot Linux on all my machines and can switch to Ubuntu if participants strongly prefer. 
+I have prepared all materials for CRI using Windows 10 because many people without a technical background use Windows and I find it difficult to avoid because of how Nordic releases developer tools. I dual boot Linux on all my machines and can switch to Ubuntu if participants strongly prefer. 
 
-## [](#mobile-app)**Preface: Neural Network with Your Phone's Accelerometer Data - no coding, minimal software installation** 
+## [](#preface)**Neural Network with Your Phone's Accelerometer Data - no coding, minimal software installation** 
 ![](https://curtpw.github.io/cri/images/simplephone.jpg)
 Train and apply a MLP (Muli Layer Perceptron) neural network on your phone using your phone's accelerometer data. This MLP has two input nodes (X and Y axis), one output node (True/false) and two hidden layers - each with two nodes.
 
@@ -65,7 +67,7 @@ You will be hacking a FitBit clone (the ID107 Plus) containing a Nordic nRF52832
 ## [](#mobile-app)**Mobile App with MLP Neural Network** 
 ![](https://curtpw.github.io/cri/images/neurophone.jpg)
 
-You will create a mobile app using the Evothings prototyping tool for Apache Cordova. Cordova is a "hybrid" JavaScript development platform for building Android and iOS apps. This means that instead of writing Java for Android and Objective C for iOS you write a single body of code in JavaScript which Cordova converts into Java and Objective C. Evothings will allow you to run your Cordova code in the Evothings prototyping app. This means you can run simple JavaScript on you laptop as a mobile app on your phone with native access to hardware!! You will need to connect to one of our wearable devices using Bluetooth and then pull data from the device using a GATT Notification Characteristic. You can use the Evothings console tool to monitor your app code the same way you would use the Chrome Dev Tools console during web development. Once you have your data its time to push it into a neural network. Synaptic a very easy to use framework for implementing MLP (Multi Layer Perceptron) neural nets in JavaScript. It is fairly simple compared to common data science tools but this very simplicity makes it perfect for real time data using minimal computational resources (like a phone). Substantial training can be accomplished in seconds. 
+You will create a mobile app using the Evothings prototyping tool for Apache Cordova. Cordova is a "hybrid" JavaScript development platform for building Android and iOS apps. This means that instead of writing Java for Android and Objective C for iOS you write a single body of code in JavaScript which Cordova converts into Java and Objective C. Evothings will allow you to run your Cordova code in the Evothings prototyping app. This means you can run simple JavaScript on your laptop as a mobile app on your phone with native access to hardware!! You will need to connect to one of our wearable devices using Bluetooth and then pull data from the device using a GATT Notification Characteristic. You can use the Evothings console tool to monitor your app code the same way you would use the Chrome Dev Tools console during web development. Once you have your data it's time to push it into a neural network. Synaptic a very easy to use framework for implementing MLP (Multi Layer Perceptron) neural nets in JavaScript. It is fairly simple compared to common data science tools but this very simplicity makes it perfect for real time data using minimal computational resources (like a phone). Substantial training can be accomplished in seconds. 
 _NOTE: There should be iOS equivalents of all the Android apps I've linked_
 
 1. Install Evothings Workbench on your laptop
@@ -74,14 +76,14 @@ _NOTE: There should be iOS equivalents of all the Android apps I've linked_
 2. Install Evothings Viewer (the Evothings prototyping app) on your mobile device
 	* [About Evothings Viewer](https://evothings.com/doc/studio/evothings-viewer.html)
 	* [Evothings Viewer on Google Playstore](https://play.google.com/store/apps/details?id=com.evothings.evothingsviewer&hl=en)
-3. Read abouthe Synaptic MLP (Multi Layer Perceptron) neural network framework
+3. Read about the Synaptic MLP (Multi Layer Perceptron) neural network framework
 	* [Synaptic.js webpage](http://caza.la/synaptic/#/)
 	* [Neural networks in JavaScript](https://blog.webkid.io/neural-networks-in-javascript/)
 4. Download the starter project and put it in your Evothings project folder
 5. Look at the starter project files. This will include the Synaptic JS and some methods for connecting to devices over Bluetooth.
 6. Decide how you want to use synaptic.js, write some code and test it by using the a BLE peripheral simulator app to send test data to your neural network app running in Evothings Viewer
 	* [BLE Peripheral Simulator on Google Playstore](https://play.google.com/store/apps/details?id=io.github.webbluetoothcg.bletestperipheral)
-7. Get sensor data then build and train a neural network using streaming sensor data (you will want to collect and array of time series data)
+7. Get sensor data then build and train a neural network using streaming sensor data (you will want to collect an array of time series data)
 8. Test your neural net on live data and see how your results differ depending on how close the current device position approximates the position the device was in during training.
 
 Once you have meaningful output from your neural net its time to send them to our hacked plasma globe over the internet. 
@@ -89,7 +91,7 @@ Once you have meaningful output from your neural net its time to send them to ou
 ## [](#raspberry-pi)**Plasma Globe with Raspberry Pi**
 ![](https://curtpw.github.io/cri/images/plasma.jpg)
 
-I have soldered wires to the power switch of the Plasma Globe (yes, caps) so that the switch can be bypassed. These wires have been attached to a relay which is essentially a computer controlled switch. This relay will be attached to the GPIO (General Purpose Input Output pins). You will configure the Pi so that it can be accessed over Bluetooth and made to turn the Plasma Globe on an off. If we are trying to display a non-binary value we might make the Plasma Globe turn on an off at various speeds - low speed for a low value and high speed or even always on for a high value. You may have trouble connecting to two devices at once (the hacker wearable and the Pi Zero) in which case you will have to switch disconnect from the one device before connecting to the other.
+I have soldered wires to the power switch of the Plasma Globe (yes, caps) so that the switch can be bypassed. These wires have been attached to a relay which is essentially a computer controlled switch. This relay will be attached to the GPIO (General Purpose Input Output pins). You will configure the Pi so that it can be accessed over Bluetooth and made to turn the Plasma Globe on an off. If we are trying to display a non-binary value we might make the Plasma Globe turn on an off at various speeds - low speed for a low value and high speed or even always on for a high value. You may have trouble connecting to two devices at once (the hacker wearable and the Pi Zero) in which case you will have to disconnect from the one device before connecting to the other.
 
 1.	If you have not already completed the mobile app above install Evothings as instructed above. A large portion of this project section also includes mobile app development using Evothings.
 2.	Take a look at the Evothings Raspberry Pi example and download the example files
@@ -149,7 +151,7 @@ In a society that constantly emphasizes the individual it can be difficult to st
 
 Auditory overstimulation and sensory processing issues are a significant problem for Autistic and ADHD individuals. In this project we will build a wearable device which can acquire and distinguish between environmental audio sources using microphone arrays and directional microphones. The device will process and filter environmental audio data using a microcontroller, Raspberry Pi or similar. Once the desired audio has been isolated it will be delivered to the user in an inconspicuous low profile fashion, for example bone conduction transducers. When combined with low-profile transparent ear plugs or over-ear noise blocking earmuffs, this device should substantially increase the quality of life for those who use it.
 
-## [](#eye-track)**Smart Glasses for the Education and Mental Health**
+## [](#eye-track)**Smart Glasses for Education and Mental Health**
 ![](https://curtpw.github.io/cri/images/glasses.png)
 
 Eye movement and gaze direction can tell us an incredible amount of information about what a person is thinking and feeling. Eye activity can tell us if a student is generally inattentive and of course what they are specifically looking at. Eye movement may even be used to diagnose autism and ADHD. Despite this, it is a signal rarely if ever used in wearable devices. In this project we will build a low profile wearable eye activity and head tracker into a normal looking pair of eyeglasses. This device will be capable of measuring general levels of eye movement, rough gaze direction and angular position of the head. Because this device is low profile, simplified sensor strategies must be used instead of an eye facing camera. For example, infrared and high resolution proximity sensors to leverage the irregular color and shape of the eyeball. Low profile feedback about attentiveness or other detected behavior will be provided to the user - possibly haptic motors or strategically placed LEDs.
