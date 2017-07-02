@@ -13,17 +13,23 @@ layout: default
 > Your goal is to **hack an off the shelf wearable device, send accelerometer data** from the hacked device **to a mobile app** which we will create, build **and train a neural network** in the mobile app to detect a specific set of wearable device data, and use the sensor data detection results **to control a modified plasma globe** connected to a Raspberry Pi over Bluetooth. I have divided the project into three separable parts. If all participants want to do mobile apps (the easiest from a hardware perspective) I can provide necessary sensor data for you. I also have a number of Arduino microcontrollers and a wide array of sensors (Heart Rate, gesture, proximity, accelerometer, gyroscope, GSR/EDA, pressure, stretch) for you to explore and play with if you want something simple.
 
 [Part 1: Streaming Sensor Data From Wearable Device](#wearable-device)
+
 [Part 2: MLP Neural Network of Mobile App Trained on Streaming Sensor Data](#mobile-app)
+
 [Part 3: Relay on Raspberry Pi Controlled By Mobile App](#raspberry-pi)
+
 [Alternate: Sensors on Arduino](#sensors)
 
 All examples and documentation can be found here: [https://github.com/curtpw/masterclass-cri](https://github.com/curtpw/masterclass-cri)
 
 ~ Curt
 
+**IMPORTANT: Do you have little or no background in computer programming? Think you might end up spending hours trying to install obscure software, looking at code you don't understand, listenting to acronyms that might as well come from a random letter generator? DON'T WORRY!! If you are interested in the concepts, I can make this engaging for you - even if reading Foucault or Lacan seems easier that navigating the more technical material below. I promise.**
+
 NOTE: I have prepared all materials for CRI using Windows 10 because many people without a technical background use Windows and I find it difficult to avoid because of how Nordic releases developer tools. I duel boot Linux on all my machines and can switch to Ubuntu if participants strongly prefer. 
 
 ## [](#wearable-device)**Wearable Device Streaming Sensor Data**
+![](https://curtpw.github.io/cri/images/wearable.jpg)
 
 You will be hacking a FitBit clone (the ID107 Plus) containing a Nordic nRF52832 SoC (System On a Chip) with a 64Mhz ARM microprocessor. This Device contains a Kionics KX022 Accelerometer and a Bluetooth 4 BLE transceiver. You can write code for the device using the Arduino IDE with Sandeep's Arduino Core for Nordic chips. I use a Segger JLink to program these devices but and SWD programmer will work. Hacking hardware can be tricky because unlike an Arduino or ARM development board the device has been built from the ground up to serve a specific purpose.
 
@@ -92,6 +98,7 @@ I have soldered wires to the power switch of the Plasma Globe (yes, caps) so tha
 #### []()Combine all of the above and then see who light up the Plasma Globe by matching the gesture (wearable device position) trained on the app neural net.
 
 ## [](#sensors)**Sensors and Arduino**
+![](https://curtpw.github.io/cri/images/toolbox.jpg)
 
 I have prepared several bread boards mounted with Arduino Nano microcontrollers. I have also brought a wide variety of sensors, most with wearable device applications, which can easily be connected to these Arduinos. Remember to use the 3 volt power pin on the arduino, not the 5 volt! 5v will kill some of the sensors and almost all the sensors will work with 3v.
 
