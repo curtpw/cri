@@ -28,6 +28,16 @@ All examples and documentation can be found here: [https://github.com/curtpw/mas
 
 NOTE 2: I have prepared all materials for CRI using Windows 10 because many people without a technical background use Windows and I find it difficult to avoid because of how Nordic releases developer tools. I duel boot Linux on all my machines and can switch to Ubuntu if participants strongly prefer. 
 
+## [](#mobile-app)**Preface: Neural Network with Your Phone's Accelerometer Data - no coding, minimal software installation** 
+![](https://curtpw.github.io/cri/images/simplephone.jpg)
+
+1. Install Evothings Workbench on your laptop and Evothings Viewer on your phone
+	* [Evothings workbench](https://evothings.com/doc/index.html)
+	* [Evothings Viewer on Google Playstore](https://play.google.com/store/apps/details?id=com.evothings.evothingsviewer&hl=en)
+2. Download the demo project zip file, unarchive and place the demo project folder in your Evothings "MyProjects" folder
+	* [Download evothings app project (cri-phone-only-neural)](cri-phone-only-neural.zip)
+3. You should see the demo project in the "My Apps" section of Evothings Workbench. Run Evothings Viewer on your phone, enter a connection key from Workbench in Viewer ("Connect" section of Workbench) and run the demo ("My Apps" section of Workbench).
+
 ## [](#wearable-device)**Wearable Device Streaming Sensor Data**
 ![](https://curtpw.github.io/cri/images/wearable.jpg)
 
