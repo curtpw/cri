@@ -26,7 +26,7 @@ All examples and documentation can be found here: [https://github.com/curtpw/mas
 
 ~ Curt
 
-**IMPORTANT: Do you have little or no background in computer programming? Think you might end up spending hours trying to install obscure software, looking at code you don't understand, listening to acronyms that might as well come from a random letter generator? DON'T WORRY!! If you are interested in the concepts, I can make this engaging for you - even if reading Foucault or Lacan seems easier that navigating the more technical material below. I promise. If you are looking for a place to start I recommend [Evothings](https://evothings.com/doc/index.html), and the "Neural Network with Your Phone's Accelerometer Data" project below.** 
+**IMPORTANT: Do you have little or no background in computer programming? Think you might end up spending hours trying to install obscure software, looking at code you don't understand, listening to acronyms that might as well come from a random letter generator? DON'T WORRY!! If you are interested in the concepts, I can make this engaging for you - even if reading Foucault or Lacan seems easier that navigating the more technical material below. I promise. If you are looking for a place to start I recommend [Evothings](https://evothings.com/doc/index.html), and the ["Neural Network with Your Phone's Accelerometer Data" project below](#preface).** 
 
 I have prepared all materials for CRI using Windows 10 because many people without a technical background use Windows and I find it difficult to avoid because of how Nordic releases developer tools. I dual boot Linux on all my machines and can switch to Ubuntu if participants strongly prefer. 
 
@@ -39,7 +39,7 @@ Train and apply a MLP (Muli Layer Perceptron) neural network on your phone using
 	* [Evothings Viewer on Google Playstore](https://play.google.com/store/apps/details?id=com.evothings.evothingsviewer&hl=en)
 2. Download the demo project zip file, unarchive and place the demo project folder in your Evothings "MyProjects" folder
 	* [Download evothings app project (cri-phone-only-neural)](cri-phone-only-neural.zip)
-3. You should see the demo project in the "My Apps" section of Evothings Workbench. Run Evothings Viewer on your phone, enter a connection key from Workbench in Viewer ("Connect" section of Workbench) and run the demo ("My Apps" section of Workbench).
+3. You should see the demo project icon in the "My Apps" section of the Evothings Workbench application. Run Evothings Viewer on your phone, enter a connection key from Evothings Workbench in Viewer ("Connect" section of Workbench) and run the demo ("My Apps" section of Workbench).
 
 ## [](#wearable-device)**Wearable Device Streaming Sensor Data**
 ![](https://curtpw.github.io/cri/images/wearable.jpg)
