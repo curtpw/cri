@@ -32,7 +32,7 @@ I have prepared all materials for CRI using Windows 10 because many people witho
 
 ## [](#preface)**Neural Network with Your Phone's Accelerometer Data - no coding, minimal software installation** 
 ![](https://curtpw.github.io/cri/images/simplephone.jpg)
-Train and apply a MLP (Muli Layer Perceptron) neural network on your phone using your phone's accelerometer data. This MLP has two input nodes (X and Y axis), one output node (True/false) and two hidden layers - each with two nodes.
+Train and apply a MLP (Multi Layer Perceptron) neural network on your phone using your phone's accelerometer data. This MLP has two input nodes (X and Y axis), one output node (True/false) and two hidden layers - each with two nodes.
 
 1. Install Evothings Workbench on your laptop and Evothings Viewer on your phone
 	* [Evothings workbench](https://evothings.com/doc/index.html)
