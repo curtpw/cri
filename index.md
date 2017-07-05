@@ -44,7 +44,7 @@ Train and apply a MLP (Multi Layer Perceptron) neural network on your phone usin
 ## [](#wearable-device)**Wearable Device Streaming Sensor Data**
 ![](https://curtpw.github.io/cri/images/wearable.jpg)
 
-You will be hacking a FitBit clone (the ID107 Plus) containing a Nordic nRF52832 SoC (System On a Chip) with a 64Mhz ARM microprocessor. This Device contains a Kionics KX022 Accelerometer and a Bluetooth 4 BLE transceiver. You can write code for the device using the Arduino IDE with Sandeep's Arduino Core for Nordic chips. I use a Segger JLink to program these devices but and SWD programmer will work. Hacking hardware can be tricky because unlike an Arduino or ARM development board the device has been built from the ground up to serve a specific purpose.
+You will be hacking a FitBit clone (the ID107 Plus) containing a Nordic nRF52832 SoC (System On a Chip) with a 64Mhz ARM microprocessor. This Device contains a Kionics KX022 Accelerometer and a Bluetooth 4 BLE transceiver. You can write code for the device using the Arduino IDE with Sandeep's Arduino Core for Nordic chips. I use a Segger JLink to program these devices but any SWD programmer will work. Hacking hardware can be tricky because unlike an Arduino or ARM development board the device has been built from the ground up to serve a specific purpose.
 
 1. Read a little about hacking Nordic wearables
 	* [Hackster.io tutorial on hacking an nRF51822 based ID107](https://www.hackster.io/smarty-the-team/smarty-the-watch-arduino-smartwatch-b9f7c4)
