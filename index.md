@@ -10,6 +10,9 @@ layout: default
 
 ## [](#master)*Wearable Devices, Neural Networks on Mobile Apps, Controlling IoT*
 
+Additional USB driver for using some Arduino: CH340
+If you have trouble connecting to an Arduino over serial download and install this CH340 driver: http://www.instructables.com/id/Arduino-Nano-CH340/
+
 > Your goal is to **hack an off the shelf wearable device, send accelerometer data** from the hacked device **to a mobile app** which we will create, build **and train a neural network** in the mobile app to detect a specific set of wearable device data, and use the sensor data detection results **to control a modified plasma globe** connected to a Raspberry Pi over Bluetooth. I have divided the project into three separable parts. If all participants want to do mobile apps (the easiest from a hardware perspective) I can provide necessary sensor data for you. I also have a number of Arduino microcontrollers and a wide array of sensors (Heart Rate, gesture, proximity, accelerometer, gyroscope, GSR/EDA, pressure, stretch) for you to explore and play with if you want something simple.
 
 [Preface: Neural Network with Your Phone's Accelerometer Data - no coding, minimal software installation](#preface)
