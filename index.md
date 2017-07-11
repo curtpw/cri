@@ -151,6 +151,7 @@ In a society that constantly emphasizes the individual it can be difficult to st
 
 ## [](#autism-audio)**Audacious Audio for Autism and ADHD: Environmental Audio Acquisition, Processing and Delivery On a Wearable Device**
 ![](https://curtpw.github.io/cri/images/hat.jpg)
+![](https://curtpw.github.io/cri/images/bone.jpg)
 
 Auditory overstimulation and sensory processing issues are a significant problem for Autistic and ADHD individuals. In this project we will build a wearable device which can acquire and distinguish between environmental audio sources using microphone arrays and directional microphones. The device will process and filter environmental audio data using a microcontroller, Raspberry Pi or similar. Once the desired audio has been isolated it will be delivered to the user in an inconspicuous low profile fashion, for example bone conduction transducers. When combined with low-profile transparent ear plugs or over-ear noise blocking earmuffs, this device should substantially increase the quality of life for those who use it.
 
